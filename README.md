@@ -102,8 +102,8 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/order-microservices.git
-cd order-microservices
+git clone https://github.com/codefalconx/gin-rabbitmq-order-system.git
+cd gin-rabbitmq-order-system
 ```
 
 ### 2. Project Structure Setup
@@ -111,7 +111,7 @@ cd order-microservices
 Create the following directory structure:
 
 ```
-order-system/
+gin-rabbitmq-order-system/
 ├── docker-compose.yml
 ├── shared/
 │   ├── events/
@@ -135,12 +135,12 @@ In each service directory, initialize Go modules:
 ```bash
 # For shared module
 cd shared
-go mod init github.com/yourusername/order-system/shared
+go mod init github.com/yourusername/gin-rabbitmq-order-system/shared
 go mod tidy
 
 # For order-service
 cd ../order-service
-go mod init github.com/yourusername/order-system/order-service
+go mod init github.com/yourusername/gin-rabbitmq-order-system/order-service
 go get -u github.com/gin-gonic/gin
 go get -u gorm.io/gorm
 go get -u gorm.io/driver/postgres
@@ -151,7 +151,7 @@ go mod tidy
 # Repeat for other services (inventory-service, billing-service, notification-service)
 ```
 
-**Note**: Replace `github.com/yourusername/order-system` with your actual module path in all `main.go` files.
+**Note**: Replace `github.com/yourusername/gin-rabbitmq-order-system` with your actual module path in all `main.go` files.
 
 ### 4. Start Infrastructure
 
@@ -254,7 +254,7 @@ Waiting for order events...
 ## 📁 Project Structure
 
 ```
-order-system/
+gin-rabbitmq-order-system/
 ├── docker-compose.yml          # Infrastructure setup
 ├── README.md                   # This file
 │
